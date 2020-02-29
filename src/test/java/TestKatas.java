@@ -11,10 +11,15 @@ public class TestKatas {
     @Test
     public void CheckShortLengthPositives() {
         doTest(new int[]{4,10,9}, new int[]{10,4,9});
-        doTest(new int[]{8,7,10,3}, new int[]{8,3,7,10});
     }
+
     @Test
     public void CheckShortLengthPositives2() {
+        doTest(new int[]{8,7,10,3}, new int[]{8,3,7,10});
+    }
+
+    @Test
+    public void CheckShortLengthPositives3() {
         doTest(new int[]{6,6,8,5,10}, new int[]{10,6,5,6,8});
         doTest(new int[]{9,4,6,4,10,5}, new int[]{9,5,4,4,6,10});
         doTest(new int[]{4,6,8,7,5}, new int[]{8,6,4,5,7});
@@ -74,7 +79,7 @@ public class TestKatas {
     }
 
     private static void doTest(final int[] values, final int[] expected) {
-        final int[] actual = Katas.pendulum(values);
+        final int[] actual = Katas.pendulum2(values);
         assertArrayEquals( expected, actual);
     }
 
