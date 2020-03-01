@@ -12,7 +12,7 @@ public class TestKatas {
     }
 
     @Test
-    public void CheckShortLengthPositives3() {
+    public void Checkpendulum2() {
         doTest1(new int[]{4, 10, 9}, new int[]{10, 4, 9});
         doTest1(new int[]{6, 6, 8, 5, 10}, new int[]{10, 6, 5, 6, 8});
         doTest1(new int[]{20, 19, 25, 16, 19, 30, 18, 24}, new int[]{25, 20, 19, 16, 18, 19, 24, 30});
@@ -25,7 +25,7 @@ public class TestKatas {
 
     // test for method : public static int[] menFromBoys(final int[] values)
     @Test
-    public void checkPositiveValues() {
+    public void CheckMenFromBoys() {
         doTest2(new int[]{7, 3, 14, 17}, new int[]{14, 17, 7, 3});
         doTest2(new int[]{2, 43, 95, 90, 37}, new int[]{2, 90, 95, 43, 37});
         doTest2(new int[]{20, 33, 50, 34, 43, 46}, new int[]{20, 34, 46, 50, 43, 33});
