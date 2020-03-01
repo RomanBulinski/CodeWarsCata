@@ -1,6 +1,7 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.*;
 
 public class Katas {
 
@@ -47,7 +48,31 @@ public class Katas {
         return result;
     }
 
+//    --------------------------------------------------------------------------------------------------
 
+    public static int[] menFromBoys(final int[] values) {
+
+        Set<Integer> arrSetInput = Arrays.stream(values).boxed().collect(Collectors.toSet());
+        int[] arrSet = arrSetInput.stream().mapToInt(Integer::intValue).toArray();
+        Arrays.sort(arrSet);
+
+        int[] result = new int[arrSet.length];
+        int inputPosition = 0;
+        int oddIndex = result.length-1;
+        int evenIndex = 0;
+
+        for( int i=0; i<arrSet.length; i++ ){
+            if( arrSet[inputPosition]%2 != 0){
+                result[ oddIndex ] = arrSet[inputPosition];
+                oddIndex--;
+            }else{
+                result[ evenIndex ] = arrSet[inputPosition];
+                evenIndex++;
+            }
+            inputPosition++;
+         }
+        return result;
+    }
 
 
 
