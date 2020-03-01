@@ -51,7 +51,6 @@ public class Katas {
 //    --------------------------------------------------------------------------------------------------
 
     public static int[] menFromBoys(final int[] values) {
-
         Set<Integer> arrSetInput = Arrays.stream(values).boxed().collect(Collectors.toSet());
         int[] arrSet = arrSetInput.stream().mapToInt(Integer::intValue).toArray();
         Arrays.sort(arrSet);
