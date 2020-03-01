@@ -51,24 +51,22 @@ public class Katas {
 //    --------------------------------------------------------------------------------------------------
 
     public static int[] menFromBoys(final int[] values) {
-        Set<Integer> arrSetInput = Arrays.stream(values).boxed().collect(Collectors.toSet());
-        int[] arrSet = arrSetInput.stream().mapToInt(Integer::intValue).toArray();
-        Arrays.sort(arrSet);
+        Set<Integer> inputSet = Arrays.stream(values).boxed().collect(Collectors.toSet());
+        int[] arr = inputSet.stream().mapToInt(Integer::intValue).toArray();
+        Arrays.sort(arr);
 
-        int[] result = new int[arrSet.length];
-        int inputPosition = 0;
+        int[] result = new int[arr.length];
         int oddIndex = result.length-1;
         int evenIndex = 0;
 
-        for( int i=0; i<arrSet.length; i++ ){
-            if( arrSet[inputPosition]%2 != 0){
-                result[ oddIndex ] = arrSet[inputPosition];
+        for( int i=0; i<arr.length; i++ ){
+            if( arr[i]%2 != 0){
+                result[ oddIndex ] = arr[i];
                 oddIndex--;
             }else{
-                result[ evenIndex ] = arrSet[inputPosition];
+                result[ evenIndex ] = arr[i];
                 evenIndex++;
             }
-            inputPosition++;
          }
         return result;
     }
